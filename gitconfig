@@ -1,0 +1,9 @@
+[user]
+	name = Winston Kinoti
+	email = prog.kinoti@gmail.com
+[push]
+	default = matching
+[alias]
+	co = checkout
+[init]
+	defaultBranch = main
