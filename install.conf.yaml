@@ -9,6 +9,7 @@
     ~/.bash_logout: bash_logout
     ~/.gitconfig: gitconfig
     ~/.profile: profile
+    ~/.config/nvim: nvim
     # ~/.zshrc: zshrc
     # ~/.vimrc: vimrc
 
