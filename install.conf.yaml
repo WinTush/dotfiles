@@ -10,6 +10,7 @@
     ~/.gitconfig: gitconfig
     ~/.profile: profile
     ~/.tmux.conf: tmux.conf
+    ~/.config/fish: fish
     ~/.config/nvim: nvim
     # ~/.zshrc: zshrc
     # ~/.vimrc: vimrc
