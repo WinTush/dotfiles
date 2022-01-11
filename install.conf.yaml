@@ -6,13 +6,14 @@
 - clean: ['~']
 
 - link:
-    ~/.bashrc: bashrc
-    ~/.bash_logout: bash_logout
-    ~/.gitconfig: gitconfig
-    ~/.profile: profile
-    ~/.tmux.conf: tmux.conf
-    ~/.config/fish: fish
-    ~/.config/nvim: nvim
+    ~/.bashrc:
+    ~/.bash_logout:
+    ~/.gitconfig:
+    ~/.profile:
+    ~/.tmux.conf:
+    ~/.config/fish:
+    ~/.config/nvim:
+    ~/.config/VSCodium:
     # ~/.zshrc: zshrc
     # ~/.vimrc: vimrc
 
