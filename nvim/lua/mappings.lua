@@ -3,7 +3,10 @@ local opts = { noremap = true }
 local silent_opts = { noremap = true, silent = true }
 local expr_opts = { noremap = true, silent = true, expr = true }
 
+-- map the leader key
+map("", "<Space>", "<NOP>", silent_opts)
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 map('n', '<leader>ve', [[:edit ~/.config/nvim/init.lua<cr>]], {})
 map('n', '<leader>vr', [[:luafile ~/.config/nvim/init.lua<cr>]], {})
