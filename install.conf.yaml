@@ -14,6 +14,7 @@
     ~/.config/fish:
     ~/.config/nvim:
     ~/.config/VSCodium:
+    ~/.local/share/fonts:
     # ~/.zshrc: zshrc
     # ~/.vimrc: vimrc
 
