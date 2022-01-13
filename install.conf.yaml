@@ -11,10 +11,18 @@
     ~/.gitconfig:
     ~/.profile:
     ~/.tmux.conf:
-    ~/.config/fish:
     ~/.config/nvim:
     ~/.config/VSCodium:
     ~/.local/share/fonts:
+
+    # Fish
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/fish_plugins: fish/fish_plugins
+    ~/.config/fish/conf.d/tide.fish: fish/conf.d/tide.fish
+    ~/.config/fish/functions/fish_user_key_bindings.fish: fish/functions/fish_user_key_bindings.fish
+    ~/.config/fish/functions/peco_change_directory.fish: fish/functions/peco_change_directory.fish
+    ~/.config/fish/functions/peco_select_history.fish: fish/functions/peco_select_history.fish
+
     # ~/.zshrc: zshrc
     # ~/.vimrc: vimrc
 
