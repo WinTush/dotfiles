@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  --use 'EdenEast/nightfox.nvim'
+  use 'EdenEast/nightfox.nvim'
   --use 'goolord/alpha-nvim'
   --use 'nvim-lualine/lualine.nvim'
 
