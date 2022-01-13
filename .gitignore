@@ -1,2 +1,5 @@
 # Fonts
 .uuid
+
+# Packer plugin for neovim
+packer_compiled.lua
