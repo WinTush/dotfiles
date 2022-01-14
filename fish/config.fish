@@ -24,3 +24,9 @@ if type -q exa
   alias ll "exa -l -g --icons"
   alias lla "ll -a"
 end
+
+# Set Caps lock as both Ctrl and Esc
+if type -q xcape
+  setxkbmap -option ctrl:nocaps
+  xcape -e 'Control_L=Escape'
+end
