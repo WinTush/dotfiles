@@ -9,16 +9,9 @@ alias ll "ls -l"
 alias lla "ll -A"
 alias g git
 command -qv nvim && alias vi nvim
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 command -qv python3 && alias python python3
-=======
 
 alias lvim ~/.local/bin/lvim && alias lv lvim
->>>>>>> Stashed changes
-=======
-
->>>>>>> Stashed changes
 
 set -gx EDITOR nvim
 
