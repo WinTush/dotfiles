@@ -12,6 +12,7 @@
     ~/.gitconfig:
     ~/.profile:
     ~/.tmux.conf:
+    ~/.config/lvim:
     ~/.config/nvim:
     ~/.config/VSCodium:
     ~/.local/share/fonts:
