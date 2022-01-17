@@ -24,7 +24,6 @@
     ~/.config/fish/functions/fish_user_key_bindings.fish: fish/functions/fish_user_key_bindings.fish
     ~/.config/fish/functions/peco_change_directory.fish: fish/functions/peco_change_directory.fish
     ~/.config/fish/functions/peco_select_history.fish: fish/functions/peco_select_history.fish
-    # ~/.local/share/fish/fish_history: fish/share/fish_history
 
     # ~/.zshrc: zshrc
     # ~/.vimrc: vimrc
