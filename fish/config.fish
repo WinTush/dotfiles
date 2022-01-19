@@ -11,9 +11,14 @@ alias g git
 command -qv nvim && alias vi nvim
 command -qv python3 && alias python python3
 
-alias lvim ~/.local/bin/lvim && alias lv lvim
+set -gx PATH $HOME/.local/bin $PATH
 
-set -gx EDITOR nvim
+if type -q lvim
+  alias lv lvim
+  set -gx EDITOR lvim
+else
+  set -gx EDITOR vi
+end
 
 # Go
 set -gx PATH /usr/local/go/bin $PATH
@@ -36,4 +41,3 @@ end
 # Rust and cargo
 set -gx PATH $HOME/.cargo/bin $PATH
 
-set -gx PATH $HOME/.local/bin $PATH
