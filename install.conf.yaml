@@ -12,9 +12,10 @@
     ~/.gitconfig:
     ~/.profile:
     ~/.tmux.conf:
+    ~/.config/kitty:
     ~/.config/lvim:
     ~/.config/nvim:
-    ~/.config/VSCodium:
+    ~/.config/VSCodium/product.json: VSCodium/product.json
     ~/.local/share/fonts:
 
     # Fish
