@@ -13,9 +13,18 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "duskfox"
 vim.opt.relativenumber =true
+vim.opt.foldenable = false -- disable folding; enable with zi
 vim.opt.foldmethod = "expr" -- folding set to "expr" for treesitter based folding
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- set to "nvim_treesitter#foldexpr()" for treesitter based folding
 vim.opt.confirm = true
+
+-- Markdown preview
+vim.cmd [[
+let g:mkdp_auto_start = 1
+let g:mkdp_auto_close = 0
+" let g:mkdp_command_for_global =1
+" let g:mkdp_browser = "firefox"
+]]
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -28,6 +37,17 @@ lvim.keys.insert_mode["kj"] = "<Esc>"
 lvim.keys.insert_mode["kJ"] = "<Esc>"
 lvim.keys.insert_mode["jk"] = "<Esc>"
 lvim.keys.insert_mode["jK"] = "<Esc>"
+
+-- Open the current file in the default program
+lvim.keys.normal_mode["<leader>x"] = ":!xdg-open %<cr><cr>"
+
+-- Easy insertion of a trailing ; or , from normal_mode
+lvim.keys.normal_mode[";;"] = "<Esc>A;<Esc>"
+lvim.keys.normal_mode[",,"] = "<Esc>A,<Esc>"
+
+-- Sudo write files
+lvim.keys.command_mode["w!!"] = "%!sudo tee > /dev/null %<cr>"
+
 -- unmap a default keymapping
 -- lvim.keys.normal_mode["<C-Up>"] = false
 -- edit a default keymapping
@@ -79,6 +99,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "javascript",
   "json",
   "lua",
+  "markdown",
   "python",
   "typescript",
   "css",
@@ -153,6 +174,11 @@ lvim.plugins = {
     {
       "folke/trouble.nvim",
       cmd = "TroubleToggle",
+    },
+    {
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn['mkdp#util#install']() end,
+    ft = {"markdown"}
     },
 }
 
