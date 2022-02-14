@@ -54,6 +54,9 @@ lvim.keys.command_mode["w!!"] = "%!sudo tee > /dev/null %<cr>"
 lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
 lvim.keys.normal_mode["<C-x>"] = ":x<cr>"
 
+-- Markdown preview with glow
+lvim.keys.normal_mode["<leader>G"] = ":Glow<cr>"
+
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
 -- local _, actions = pcall(require, "telescope.actions")
@@ -175,11 +178,7 @@ lvim.plugins = {
       "folke/trouble.nvim",
       cmd = "TroubleToggle",
     },
-    {
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn['mkdp#util#install']() end,
-    ft = {"markdown"}
-    },
+    {"ellisonleao/glow.nvim"},
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
