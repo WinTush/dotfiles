@@ -41,3 +41,5 @@ end
 # Rust and cargo
 set -gx PATH $HOME/.cargo/bin $PATH
 
+
+thefuck --alias | source
