@@ -11,7 +11,6 @@
     ~/.bash_logout:
     ~/.gitconfig:
     ~/.profile:
-    ~/.tmux.conf:
     ~/.config/kitty:
     ~/.config/lvim:
     ~/.config/nvim:
@@ -25,6 +24,10 @@
     ~/.config/fish/functions/fish_user_key_bindings.fish: fish/functions/fish_user_key_bindings.fish
     ~/.config/fish/functions/peco_change_directory.fish: fish/functions/peco_change_directory.fish
     ~/.config/fish/functions/peco_select_history.fish: fish/functions/peco_select_history.fish
+
+    # Tmux
+    ~/.tmux.conf:
+    ~/.local/bin/ide: tmux.ide
 
     # ~/.zshrc: zshrc
     # ~/.vimrc: vimrc
