@@ -11,10 +11,10 @@
     ~/.bash_logout:
     ~/.gitconfig:
     ~/.profile:
-    ~/.config/kitty:
+    # ~/.config/kitty:
     ~/.config/lvim:
     ~/.config/nvim:
-    ~/.config/VSCodium/product.json: VSCodium/product.json
+    # ~/.config/VSCodium/product.json: VSCodium/product.json
     ~/.local/share/fonts:
 
     # Fish
