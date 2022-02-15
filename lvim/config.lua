@@ -179,6 +179,7 @@ lvim.plugins = {
       cmd = "TroubleToggle",
     },
     {"ellisonleao/glow.nvim"},
+    {"tpope/vim-obsession"},
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
