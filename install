@@ -2,6 +2,15 @@
 
 set -e
 
+# termux
+if [[ $(uname -o) == 'Android' ]]
+then
+  git switch android
+else
+  git switch main
+fi
+
+
 CONFIG="install.conf.yaml"
 DOTBOT_DIR="dotbot"
 
