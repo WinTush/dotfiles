@@ -43,3 +43,9 @@ set -gx PATH $HOME/.cargo/bin $PATH
 
 
 thefuck --alias | source
+
+
+# CS50
+set -gx CC "clang"
+set -gx CFLAGS "-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
+set -gx LDLIBS "-lcrypt -lcs50 -lm"
