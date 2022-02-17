@@ -27,6 +27,7 @@
 
     # Tmux
     ~/.tmux.conf:
+    ~/.tmux/tmux.remote.conf:
     ~/.local/bin/ide: tmux.ide
 
     # ~/.zshrc: zshrc
