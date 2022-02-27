@@ -14,6 +14,7 @@
     # ~/.config/kitty:
     ~/.config/lvim:
     ~/.config/nvim:
+    ~/.Xresources:
     # ~/.config/VSCodium/product.json: VSCodium/product.json
     ~/.local/share/fonts:
 
