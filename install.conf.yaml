@@ -9,14 +9,15 @@
 - link:
     ~/.bashrc:
     ~/.bash_logout:
-    ~/.gitconfig:
-    ~/.profile:
     # ~/.config/kitty:
-    ~/.config/lvim:
     ~/.config/nvim:
-    ~/.Xresources:
+    ~/.config/lvim:
     # ~/.config/VSCodium/product.json: VSCodium/product.json
+    ~/.gitconfig:
+    ~/.inputrc:
     ~/.local/share/fonts:
+    ~/.profile:
+    ~/.Xresources:
 
     # Fish
     ~/.config/fish/config.fish: fish/config.fish
