@@ -42,7 +42,7 @@ end
 set -gx PATH $HOME/.cargo/bin $PATH
 
 
-thefuck --alias | source
+# thefuck --alias | source
 
 
 # CS50
