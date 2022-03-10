@@ -87,6 +87,27 @@ lvim.builtin.which_key.mappings["t"] = {
   w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnostics" },
 }
 
+-- vim-better-sml keybindings
+lvim.builtin.which_key.mappings["S"] = {
+  name = "+SML",
+  h = { "<cmd>SMLCheckHealth<cr>", "Check Health" },
+  d = { "<cmd>SMLJumpToDef<cr>", "Definitions" },
+  r = { "<cmd>SMLReplBuild<cr>", "Repl Build" },
+  c = { "<cmd>SMLReplClear<cr>", "Repl Clear" },
+  s = { "<cmd>SMLReplStart<cr>", "Repl Start" },
+  t = { "<cmd>SMLTypeQuery<cr>", "Type Query" },
+}
+
+vim.cmd [[
+augroup vimbettersml
+  au!
+
+  " ----- Keybindings -----
+
+  au FileType sml nnoremap <silent> <buffer> gd :SMLJumpToDef<CR>
+augroup END
+]]
+
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.dashboard.active = true
@@ -180,6 +201,7 @@ lvim.plugins = {
     },
     {"ellisonleao/glow.nvim"},
     {"tpope/vim-obsession"},
+    {'jez/vim-better-sml'},
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
