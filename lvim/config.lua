@@ -172,6 +172,7 @@ formatters.setup {
     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
     filetypes = { "typescript", "typescriptreact" },
   },
+  -- { exe = "uncrustify", args = {} },
 }
 
 -- -- set additional linters
@@ -202,6 +203,7 @@ lvim.plugins = {
     {"ellisonleao/glow.nvim"},
     {"tpope/vim-obsession"},
     {'jez/vim-better-sml'},
+    {"github/copilot.vim"}
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
