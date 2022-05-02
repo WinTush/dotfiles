@@ -12,11 +12,12 @@ an executable
 lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "duskfox"
-vim.opt.relativenumber =true
+vim.opt.relativenumber = true
 vim.opt.foldenable = false -- disable folding; enable with zi
 vim.opt.foldmethod = "expr" -- folding set to "expr" for treesitter based folding
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- set to "nvim_treesitter#foldexpr()" for treesitter based folding
 vim.opt.confirm = true
+vim.opt.shell = "/bin/sh"
 
 -- Markdown preview
 vim.cmd [[
@@ -110,7 +111,7 @@ augroup END
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-lvim.builtin.dashboard.active = true
+lvim.builtin.alpha.active = true
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
@@ -195,15 +196,15 @@ linters.setup {
 
 -- Additional Plugins
 lvim.plugins = {
-    {"EdenEast/nightfox.nvim"},
-    {
-      "folke/trouble.nvim",
-      cmd = "TroubleToggle",
-    },
-    {"ellisonleao/glow.nvim"},
-    {"tpope/vim-obsession"},
-    {'jez/vim-better-sml'},
-    {"github/copilot.vim"}
+  { "EdenEast/nightfox.nvim" },
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
+  { "ellisonleao/glow.nvim" },
+  { "tpope/vim-obsession" },
+  { 'jez/vim-better-sml' },
+  { "github/copilot.vim" }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
