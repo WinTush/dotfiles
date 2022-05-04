@@ -18,6 +18,9 @@ vim.opt.foldmethod = "expr" -- folding set to "expr" for treesitter based foldin
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- set to "nvim_treesitter#foldexpr()" for treesitter based folding
 vim.opt.confirm = true
 vim.opt.shell = "/bin/sh"
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.expandtab = true
 
 -- Markdown preview
 vim.cmd [[
@@ -79,24 +82,24 @@ lvim.keys.normal_mode["<leader>G"] = ":Glow<cr>"
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["t"] = {
-  name = "+Trouble",
-  r = { "<cmd>Trouble lsp_references<cr>", "References" },
-  f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
-  d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnostics" },
-  q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
-  l = { "<cmd>Trouble loclist<cr>", "LocationList" },
-  w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnostics" },
+    name = "+Trouble",
+    r = { "<cmd>Trouble lsp_references<cr>", "References" },
+    f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
+    d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnostics" },
+    q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
+    l = { "<cmd>Trouble loclist<cr>", "LocationList" },
+    w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnostics" },
 }
 
 -- vim-better-sml keybindings
 lvim.builtin.which_key.mappings["S"] = {
-  name = "+SML",
-  h = { "<cmd>SMLCheckHealth<cr>", "Check Health" },
-  d = { "<cmd>SMLJumpToDef<cr>", "Definitions" },
-  r = { "<cmd>SMLReplBuild<cr>", "Repl Build" },
-  c = { "<cmd>SMLReplClear<cr>", "Repl Clear" },
-  s = { "<cmd>SMLReplStart<cr>", "Repl Start" },
-  t = { "<cmd>SMLTypeQuery<cr>", "Type Query" },
+    name = "+SML",
+    h = { "<cmd>SMLCheckHealth<cr>", "Check Health" },
+    d = { "<cmd>SMLJumpToDef<cr>", "Definitions" },
+    r = { "<cmd>SMLReplBuild<cr>", "Repl Build" },
+    c = { "<cmd>SMLReplClear<cr>", "Repl Clear" },
+    s = { "<cmd>SMLReplStart<cr>", "Repl Start" },
+    t = { "<cmd>SMLTypeQuery<cr>", "Type Query" },
 }
 
 vim.cmd [[
@@ -119,18 +122,18 @@ lvim.builtin.nvimtree.show_icons.git = 0
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
-  "bash",
-  "c",
-  "javascript",
-  "json",
-  "lua",
-  "markdown",
-  "python",
-  "typescript",
-  "css",
-  "rust",
-  "java",
-  "yaml",
+    "bash",
+    "c",
+    "javascript",
+    "json",
+    "lua",
+    "markdown",
+    "python",
+    "typescript",
+    "css",
+    "rust",
+    "java",
+    "yaml",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -162,49 +165,49 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { command = "black", filetypes = { "python" } },
-  { command = "isort", filetypes = { "python" } },
-  {
-    -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
-    command = "prettier",
-    ---@usage arguments to pass to the formatter
-    -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
-    extra_args = { "--print-with", "100" },
-    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    filetypes = { "typescript", "typescriptreact" },
-  },
-  -- { exe = "uncrustify", args = {} },
+    { command = "black", filetypes = { "python" } },
+    { command = "isort", filetypes = { "python" } },
+    {
+        -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+        command = "prettier",
+        ---@usage arguments to pass to the formatter
+        -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+        extra_args = { "--print-with", "100" },
+        ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+        filetypes = { "typescript", "typescriptreact" },
+    },
+    -- { exe = "uncrustify", args = {} },
 }
 
 -- -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { command = "flake8", filetypes = { "python" } },
-  {
-    -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
-    command = "shellcheck",
-    ---@usage arguments to pass to the formatter
-    -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
-    extra_args = { "--severity", "warning" },
-  },
-  {
-    command = "codespell",
-    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    filetypes = { "javascript", "python" },
-  },
+    { command = "flake8", filetypes = { "python" } },
+    {
+        -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+        command = "shellcheck",
+        ---@usage arguments to pass to the formatter
+        -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+        extra_args = { "--severity", "warning" },
+    },
+    {
+        command = "codespell",
+        ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+        filetypes = { "javascript", "python" },
+    },
 }
 
 -- Additional Plugins
 lvim.plugins = {
-  { "EdenEast/nightfox.nvim" },
-  {
-    "folke/trouble.nvim",
-    cmd = "TroubleToggle",
-  },
-  { "ellisonleao/glow.nvim" },
-  { "tpope/vim-obsession" },
-  { 'jez/vim-better-sml' },
-  { "github/copilot.vim" }
+    { "EdenEast/nightfox.nvim" },
+    {
+        "folke/trouble.nvim",
+        cmd = "TroubleToggle",
+    },
+    { "ellisonleao/glow.nvim" },
+    { "tpope/vim-obsession" },
+    { 'jez/vim-better-sml' },
+    { "github/copilot.vim" }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
