@@ -29,6 +29,15 @@ let g:mkdp_auto_close = 0
 " let g:mkdp_browser = "firefox"
 ]]
 
+-- Hardtime
+lvim.keys.normal_mode["<leader>H"] = ":HardTimeToggle<cr>"
+vim.cmd [[
+let g:hardtime_default_on = 1
+let g:hardtime_timeout = 2000
+let g:hardtime_allow_different_key = 1
+let g:hardtime_maxcount = 2
+]]
+
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
@@ -207,7 +216,8 @@ lvim.plugins = {
     { "ellisonleao/glow.nvim" },
     { "tpope/vim-obsession" },
     { 'jez/vim-better-sml' },
-    { "github/copilot.vim" }
+    { "github/copilot.vim" },
+    { "takac/vim-hardtime" },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
