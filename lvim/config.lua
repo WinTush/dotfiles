@@ -54,8 +54,8 @@ lvim.keys.insert_mode["jK"] = "<Esc>"
 lvim.keys.normal_mode["<leader>x"] = ":!xdg-open %<cr><cr>"
 
 -- Easy insertion of a trailing ; or , from normal_mode
-lvim.keys.normal_mode[";;"] = "<Esc>A;<Esc>"
-lvim.keys.normal_mode[",,"] = "<Esc>A,<Esc>"
+-- lvim.keys.normal_mode[";;"] = "<Esc>A;<Esc>"
+-- lvim.keys.normal_mode[",,"] = "<Esc>A,<Esc>"
 
 -- Sudo write files
 lvim.keys.command_mode["w!!"] = "%!sudo tee > /dev/null %<cr>"
