@@ -90,6 +90,7 @@ lvim.keys.normal_mode["<leader>G"] = ":Glow<cr>"
 -- }
 
 -- Use which-key to add extra bindings with the leader-key prefix
+lvim.builtin.which_key.mappings.b.n = { "<cmd>BufferLineCycleNext<CR>", "Next" }
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["t"] = {
     name = "+Trouble",
