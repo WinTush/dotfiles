@@ -10,7 +10,9 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
+lvim.lsp.diagnostics.virtual_text = false
 lvim.colorscheme = "duskfox"
+
 vim.opt.relativenumber = true
 vim.opt.foldenable = false -- disable folding; enable with zi
 vim.opt.foldmethod = "expr" -- folding set to "expr" for treesitter based folding
