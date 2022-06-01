@@ -221,6 +221,12 @@ lvim.plugins = {
     { 'jez/vim-better-sml' },
     { "github/copilot.vim" },
     { "takac/vim-hardtime" },
+    {
+        "tzachar/cmp-tabnine",
+        run = "./install.sh",
+        requires = "hrsh7th/nvim-cmp",
+        -- event = "InsertEnter",
+    },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
