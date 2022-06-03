@@ -33,4 +33,5 @@ lvim.plugins = {
             require("user.hop").config()
         end,
     },
+    { "p00f/nvim-ts-rainbow" },
 }
