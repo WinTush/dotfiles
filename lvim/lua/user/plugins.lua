@@ -8,7 +8,20 @@ lvim.plugins = {
     { "ellisonleao/glow.nvim" },
     { "tpope/vim-obsession" },
     { 'jez/vim-better-sml' },
-    { "github/copilot.vim" },
+    { "zbirenbaum/copilot.lua",
+        event = { "VimEnter" },
+        config = function()
+            vim.defer_fn(function()
+                require("copilot").setup {
+                    plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
+                }
+            end, 100)
+        end,
+    },
+
+    { "zbirenbaum/copilot-cmp",
+        after = { "copilot.lua", "nvim-cmp" },
+    },
     { "takac/vim-hardtime" },
     {
         "tzachar/cmp-tabnine",
@@ -35,3 +48,5 @@ lvim.plugins = {
     },
     { "p00f/nvim-ts-rainbow" },
 }
+
+table.insert(lvim.builtin.cmp.sources, { name = "copilot", group_index = 0 })
