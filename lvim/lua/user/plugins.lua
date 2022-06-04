@@ -89,6 +89,12 @@ lvim.plugins = {
             vim.g.gitblame_enabled = 0
         end,
     },
+    {
+        "Pocco81/AutoSave.nvim",
+        config = function()
+            require("autosave").setup()
+        end,
+    },
 }
 
 table.insert(lvim.builtin.cmp.sources, { name = "copilot", group_index = 0 })
