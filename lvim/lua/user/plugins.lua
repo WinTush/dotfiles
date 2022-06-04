@@ -7,7 +7,7 @@ lvim.plugins = {
     },
     { "ellisonleao/glow.nvim" },
     { "tpope/vim-obsession" },
-    { 'jez/vim-better-sml' },
+    { "jez/vim-better-sml" },
     { "zbirenbaum/copilot.lua",
         event = { "VimEnter" },
         config = function()
@@ -30,7 +30,7 @@ lvim.plugins = {
         -- event = "InsertEnter",
     },
     {
-        'wfxr/minimap.vim',
+        "wfxr/minimap.vim",
         run = "cargo install --locked code-minimap",
         -- cmd = {"Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight"},
         config = function()
@@ -52,6 +52,13 @@ lvim.plugins = {
         event = "BufRead",
         config = function()
             require "lsp_signature".setup()
+        end
+    },
+    {
+        "karb94/neoscroll.nvim",
+        event = "WinScrolled",
+        config = function()
+            require("user.neoscroll").config()
         end
     },
 }
