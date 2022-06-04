@@ -61,6 +61,13 @@ lvim.plugins = {
             require("user.neoscroll").config()
         end
     },
+    {
+        "ethanholz/nvim-lastplace",
+        event = "BufRead",
+        config = function()
+            require("user.nvim-lastplace").config()
+        end,
+    },
 }
 
 table.insert(lvim.builtin.cmp.sources, { name = "copilot", group_index = 0 })
