@@ -69,6 +69,10 @@ lvim.plugins = {
         end,
     },
     { "tpope/vim-repeat" },
+    {
+        "felipec/vim-sanegx",
+        event = "BufRead",
+    },
 }
 
 table.insert(lvim.builtin.cmp.sources, { name = "copilot", group_index = 0 })
