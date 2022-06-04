@@ -47,6 +47,13 @@ lvim.plugins = {
         end,
     },
     { "p00f/nvim-ts-rainbow" },
+    {
+        "ray-x/lsp_signature.nvim",
+        event = "BufRead",
+        config = function()
+            require "lsp_signature".setup()
+        end
+    },
 }
 
 table.insert(lvim.builtin.cmp.sources, { name = "copilot", group_index = 0 })
