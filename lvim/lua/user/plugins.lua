@@ -68,6 +68,7 @@ lvim.plugins = {
             require("user.nvim-lastplace").config()
         end,
     },
+    { "tpope/vim-repeat" },
 }
 
 table.insert(lvim.builtin.cmp.sources, { name = "copilot", group_index = 0 })
