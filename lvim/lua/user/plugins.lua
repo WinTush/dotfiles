@@ -95,6 +95,10 @@ lvim.plugins = {
             require("autosave").setup()
         end,
     },
+    {
+        "metakirby5/codi.vim",
+        cmd = "Codi",
+    },
 }
 
 table.insert(lvim.builtin.cmp.sources, { name = "copilot", group_index = 0 })
