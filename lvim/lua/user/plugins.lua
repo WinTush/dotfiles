@@ -99,6 +99,12 @@ lvim.plugins = {
         "metakirby5/codi.vim",
         cmd = "Codi",
     },
+    {
+        'gelguy/wilder.nvim',
+        config = function()
+            require("user.wilder").config()
+        end,
+    },
 }
 
 table.insert(lvim.builtin.cmp.sources, { name = "copilot", group_index = 0 })
