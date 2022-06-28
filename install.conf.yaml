@@ -15,7 +15,7 @@
     ~/.config/lvim:
     ~/.config/nvim:
     # ~/.config/VSCodium/product.json: VSCodium/product.json
-    ~/.local/share/fonts:
+    ~/.termux:
 
     # Fish
     ~/.config/fish/config.fish: fish/config.fish
