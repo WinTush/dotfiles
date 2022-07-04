@@ -9,7 +9,7 @@
 - link:
     ~/.bashrc:
     ~/.bash_logout:
-    # ~/.config/kitty:
+    ~/.config/kitty:
     ~/.config/nvim:
     ~/.config/lvim:
     # ~/.config/VSCodium/product.json: VSCodium/product.json
