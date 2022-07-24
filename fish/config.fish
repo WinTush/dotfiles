@@ -45,6 +45,10 @@ set -gx PATH $HOME/.cargo/bin $PATH
 
 # thefuck --alias | source
 
+if type -q rmtrash
+  alias rm "rmtrash -f"
+  alias rmdir rmdirtrash
+end
 
 # CS50
 set -gx CC "clang"
