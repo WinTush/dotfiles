@@ -120,6 +120,10 @@ linters.setup {
         ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
         filetypes = { "javascript", "python" },
     },
+    {
+        command = "sqlfluff",
+        extra_args = { "--dialect", "postgres" }, -- change to your dialect
+    },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
