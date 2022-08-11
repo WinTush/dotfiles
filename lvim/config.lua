@@ -102,6 +102,15 @@ formatters.setup {
         filetypes = { "typescript", "typescriptreact" },
     },
     -- { exe = "uncrustify", args = {} },
+    {
+        exe = "shfmt",
+        filetypes = {
+            "sh",
+            "shell",
+            "bash",
+            "zsh",
+        },
+    },
 }
 
 -- -- set additional linters
