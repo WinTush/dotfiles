@@ -32,12 +32,6 @@ if type -q exa
   alias lla "ll -a"
 end
 
-# Set Caps lock as both Ctrl and Esc
-if type -q xcape
-  setxkbmap -option ctrl:nocaps
-  xcape -e 'Control_L=Escape'
-end
-
 # Rust and cargo
 set -gx PATH $HOME/.cargo/bin $PATH
 
