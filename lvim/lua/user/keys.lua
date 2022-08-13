@@ -1,8 +1,6 @@
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-lvim.keys.insert_mode["<C-s>"] = "<Esc>:w<cr>a"
 
 -- Easier escape from insert mode
 lvim.keys.insert_mode["kj"] = "<Esc>"
@@ -17,14 +15,10 @@ lvim.keys.normal_mode["<leader>x"] = ":!xdg-open %<cr><cr>"
 -- lvim.keys.normal_mode[";;"] = "<Esc>A;<Esc>"
 -- lvim.keys.normal_mode[",,"] = "<Esc>A,<Esc>"
 
--- Sudo write files
-lvim.keys.command_mode["w!!"] = "%!sudo tee > /dev/null %<cr>"
-
 -- unmap a default keymapping
 -- lvim.keys.normal_mode["<C-Up>"] = false
 -- edit a default keymapping
 lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
-lvim.keys.normal_mode["<C-x>"] = ":x<cr>"
 
 -- Markdown preview with glow
 lvim.keys.normal_mode["<leader>G"] = ":Glow<cr>"
