@@ -119,6 +119,10 @@ lvim.plugins = {
             })
         end,
     },
+    {
+        'stevearc/aerial.nvim',
+        config = function() require('aerial').setup() end
+    },
 }
 
 table.insert(lvim.builtin.cmp.sources, { name = "copilot", group_index = 0 })

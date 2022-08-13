@@ -44,6 +44,7 @@ lvim.keys.normal_mode["<leader>G"] = ":Glow<cr>"
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings.b.n = { "<cmd>BufferLineCycleNext<CR>", "Next" }
 lvim.builtin.which_key.mappings.b.m = { "<cmd>MinimapToggle<CR>", "Minimap" }
+lvim.builtin.which_key.mappings.b.o = { "<cmd>AerialToggle!<CR>", "Code Outline" }
 lvim.builtin.which_key.mappings.g.l = { "<cmd>GitBlameToggle<CR>", "Blame" }
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["C"] = { "<cmd>Codi<CR>", "Codi" }
