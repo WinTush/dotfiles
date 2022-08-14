@@ -4,4 +4,4 @@
 	ignore = dirty
 [submodule "nvim"]
 	path = nvim
-	url = https://github.com/LunarVim/nvim-basic-ide
+	url = https://github.com/WinTush/nvim-basic-ide
