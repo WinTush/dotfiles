@@ -9,13 +9,13 @@ alias ll "ls -l"
 alias lla "ll -A"
 alias g git
 command -qv nvim && alias vi nvim
+command -qv lvim && alias lv lvim
 command -qv python3 && alias python python3
 
 set -gx PATH $HOME/.local/bin $PATH
 
-if type -q lvim
-  alias lv lvim
-  set -gx EDITOR lvim
+if type -q nvim
+  set -gx EDITOR nvim
 else
   set -gx EDITOR vi
 end
