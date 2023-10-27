@@ -9,3 +9,5 @@
 	defaultBranch = main
 [ghq]
   root = ~/ghq
+[core]
+	excludesfile = /home/wintush/.gitignore_global
