@@ -44,7 +44,7 @@ if type -q rmtrash
 end
 
 # CS50
-set -gx CC "clang"
-set -gx CFLAGS "-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
-set -gx LDLIBS "-lcrypt -lcs50 -lm"
-set -gx LD_LIBRARY_PATH /usr/local/lib
+# set -gx CC "clang"
+# set -gx CFLAGS "-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
+# set -gx LDLIBS "-lcrypt -lcs50 -lm"
+# set -gx LD_LIBRARY_PATH /usr/local/lib
