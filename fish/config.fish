@@ -43,6 +43,16 @@ if type -q rmtrash
   alias rmdir rmdirtrash
 end
 
+
+# pyenv
+if type -q pyenv
+  pyenv init - | source
+  status --is-interactive; and pyenv virtualenv-init - | source
+  alias pyv "pyenv virtualenv"
+  alias pya "pyenv activate"
+  alias pyd "pyenv deactivate"
+end
+
 # CS50
 # set -gx CC "clang"
 # set -gx CFLAGS "-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
