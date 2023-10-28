@@ -25,11 +25,10 @@ set -gx PATH /usr/local/go/bin $PATH
 set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 
-# Exa
-set -gx PATH /usr/local/bin/exa/bin $PATH
-if type -q exa
-  alias ll "exa -l -g --icons"
-  alias lla "ll -a"
+# Eza
+if type -q eza
+    alias ll "eza -l -g --icons"
+    alias lla "ll -a"
 end
 
 # Rust and cargo
