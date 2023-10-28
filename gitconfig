@@ -7,6 +7,11 @@
 	co = checkout
 [init]
 	defaultBranch = main
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "git@github-tmpsins:tmpsins/"]
+    insteadOf = git@github.com:tmpsins/
+    insteadOf = ssh://git@github.com/tmpsins/
 [ghq]
   root = ~/ghq
 [core]
