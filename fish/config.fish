@@ -3,10 +3,6 @@ set fish_greeting ""
 set -gx TERM xterm-256color
 
 # aliases
-alias ls "ls -p -G"
-alias la "ls -A"
-alias ll "ls -l"
-alias lla "ll -A"
 alias g git
 command -qv nvim && alias vi nvim
 command -qv lvim && alias lv lvim
@@ -27,9 +23,14 @@ set -gx PATH $GOPATH/bin $PATH
 
 # Eza
 if type -q eza
-    alias ll "eza -l -g --icons"
-    alias lla "ll -a"
+    alias ls "eza --icons -g"
+else
+    alias ls "ls -p --color=auto"
 end
+
+alias la "ls -A"
+alias ll "ls -l"
+alias lla "ll -A"
 
 # Rust and cargo
 set -gx PATH $HOME/.cargo/bin $PATH
