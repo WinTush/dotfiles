@@ -15,9 +15,9 @@ command -qv python3 && alias python python3
 set -gx PATH $HOME/.local/bin $PATH
 
 if type -q nvim
-  set -gx EDITOR nvim
+    set -gx EDITOR nvim
 else
-  set -gx EDITOR vi
+    set -gx EDITOR vi
 end
 
 # Go
@@ -38,18 +38,18 @@ set -gx PATH $HOME/.cargo/bin $PATH
 # thefuck --alias | source
 
 if type -q rmtrash
-  alias rm "rmtrash -f"
-  alias rmdir rmdirtrash
+    alias rm "rmtrash -f"
+    alias rmdir rmdirtrash
 end
 
 
 # pyenv
 if type -q pyenv
-  pyenv init - | source
-  status --is-interactive; and pyenv virtualenv-init - | source
-  alias pyv "pyenv virtualenv"
-  alias pya "pyenv activate"
-  alias pyd "pyenv deactivate"
+    pyenv init - | source
+    status --is-interactive; and pyenv virtualenv-init - | source
+    alias pyv "pyenv virtualenv"
+    alias pya "pyenv activate"
+    alias pyd "pyenv deactivate"
 end
 
 # CS50
